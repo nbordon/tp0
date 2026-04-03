@@ -34,9 +34,9 @@ int main(void)
 		puerto = config_get_string_value(config,"PUERTO");
 		valor = config_get_string_value(config,"CLAVE");
 		// Loggeamos el valor de config
-		log_info(logger, ip);
-		log_info(logger, puerto);
-		log_info(logger, valor);
+		log_info(logger, "Leido IP %s",ip);
+		log_info(logger, "Leido PUERTO %s", puerto);
+		log_info(logger, "Leido CLAVE %s", valor);
 	}	
 
 	/* ---------------- LEER DE CONSOLA ---------------- */
