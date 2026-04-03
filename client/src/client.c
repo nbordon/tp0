@@ -87,10 +87,14 @@ void leer_consola(t_log* logger)
 	leido = readline("> ");
 
 	// El resto, las vamos leyendo y logueando hasta recibir un string vacío
-
-
+	while (!string_is_empty(leido))
+	{	
+		log_info(logger, "Leido por consola %s", leido);
+		leido = readline("> ");
+	}
+	
 	// ¡No te olvides de liberar las lineas antes de regresar!
-
+	free(leido);
 }
 
 void paquete(int conexion)
